@@ -1,0 +1,61 @@
+---
+import Item from "../components/project/Item.astro"
+---
+
+<section class="min-h-screen bg-gradient-to-br from-purple-900 to-purple-950">
+    <h2>My Projects</h2>
+    <div class="grid grid-cols-3">
+        <Item
+            banner=""
+            title="Deaconn"
+            link="https://deaconn.net"
+            openSource={true}
+            category="Technology"
+        >
+            A community and future software developer with the goal to bring together and empower developers and engineers.
+        </Item>
+        <Item
+            banner=""
+            title="The Modding Community"
+            link="https://moddingcommunity.com"
+            openSource={true}
+            category="Gaming"   
+        >
+            An upcoming inclusive modding community and game developer that currently offers a forum and, in the future, will provide a mod workshop, server browser, and much more! We support popular games like Minecraft, GTA V, Skyrim, Garry's Mod, and many others!
+        </Item>
+        <Item
+            banner=""
+            title="Best Mods"
+            link="https://bestmods.io"
+            openSource={true}
+            category="Gaming"
+        >
+            An open source website that serves as an index for game mods and allows users to easily find mods from many sources on the Internet.
+        </Item>
+        <Item
+            banner=""
+            title="Browser.TF"
+            link="https://btf.bestservers.io"
+            openSource={true}
+            category="Gaming"
+        >
+            A web-sided server browser for the game Team Fortress 2 I made back in 2015/2016 while in High School. The domain used to be browser.tf and fairly active, but was unfortunately lost in mid-2022. As a result, it is now btf.bestservers.io.
+        </Item>
+        <Item
+            banner=""
+            title="XDP Firewall"
+            openSource={true}
+            category="Network Security"
+        >
+            A stateless firewall that utilizes the Linux kernel's XDP hook. The XDP hook allows for very fast network processing on Linux systems. This is great for dropping malicious traffic from a (D)DoS attack. IPv6 is supported with this firewall! I hope this helps network engineers/programmers interested in utilizing XDP!
+        </Item>
+        <Item
+            banner=""
+            title="Packet Batch"
+            openSource={true}
+            category="Network Security"
+        >
+            A collection of high-performance applications and tools designed for generating and sending network packets. It serves two main purposes: penetration testing, which involves assessing network security by simulating various attacks like Denial of Service (DoS); and network monitoring, which involves analyzing and inspecting network traffic.
+        </Item>
+    </div>
+</section>
