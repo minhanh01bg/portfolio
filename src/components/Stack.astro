@@ -13,78 +13,82 @@ import TsIcon from "../assets/stack/Ts.svg"
 import CSharpIcon from "../assets/stack/Csharp.svg"
 import JavaIcon from "../assets/stack/Java.svg"
 
-import Item from "../components/stack/Item.astro"
+import StackWheel from "./react/Wheel"
+
+const wheelItems = [
+    {
+        title: "TS/JS",
+        icon: TsIcon.src,
+        expLevel: 10
+    },
+    {
+        title: "React",
+        icon: ReactIcon.src,
+        expLevel: 10
+    },
+    {
+        title: "CSS",
+        icon: CssIcon.src,
+        expLevel: 10
+    },
+    {
+        title: "HTML",
+        icon: HtmlIcon.src,
+        expLevel: 10
+    },
+    {
+        title: "Go",
+        icon: GoIcon.src,
+        expLevel: 10
+    },
+    {
+        title: "Python",
+        icon: PythonIcon.src,
+        expLevel: 10
+    },
+    {
+        title: "C",
+        icon: CodeIcon.src,
+        expLevel: 10
+    },
+    {
+        title: "Rust",
+        icon: RustIcon.src,
+        expLevel: 10
+    },
+    {
+        title: "Docker",
+        icon: DockerIcon.src,
+        expLevel: 10
+    },
+    {
+        title: "Kubernetes",
+        icon: KubernetesIcon.src,
+        expLevel: 2
+    },
+    {
+        title: "C#",
+        icon: CSharpIcon.src,
+        expLevel: 5
+    },
+    {
+        title: "Java",
+        icon: JavaIcon.src,
+        expLevel: 1
+    },
+    {
+        title: "Linux",
+        icon: LinuxIcon.src,
+        expLevel: 10
+    }
+]
 ---
 
-<section class="min-h-screen bg-gradient-to-br from-indigo-900 to-indigo-950 p-10">
-    <div class="container mx-auto">
-        <h2 class="text-white text-3xl font-extrabold mb-2">My Stack</h2>
-        <div class="grid grid-cols-5 gap-y-4 gap-x-32">
-            <Item
-                title="TS/JS"
-                icon={TsIcon.src}
-                expLevel="Efficient"
-            />
-            <Item
-                title="React"
-                icon={ReactIcon.src}
-                expLevel="Efficient"
-            />
-            <Item
-                title="CSS"
-                icon={CssIcon.src}
-                expLevel="Efficient"
-            />
-            <Item
-                title="HTML"
-                icon={HtmlIcon.src}
-                expLevel="Efficient"
-            />
-            <Item
-                title="Go"
-                icon={GoIcon.src}
-                expLevel="Efficient"
-            />
-            <Item
-                title="Python"
-                icon={PythonIcon.src}
-                expLevel="Efficient"
-            />
-            <Item
-                title="C"
-                icon={CodeIcon.src}
-                expLevel="Efficient"
-            />
-            <Item
-                title="Rust"
-                icon={RustIcon.src}
-                expLevel="Medium"
-            />
-            <Item
-                title="Docker"
-                icon={DockerIcon.src}
-                expLevel="Efficient"
-            />
-            <Item
-                title="Kubernetes"
-                icon={KubernetesIcon.src}
-                expLevel="Medium"
-            />
-            <Item
-                title="C#"
-                icon={CSharpIcon.src}
-                expLevel="Efficient"
-            />
-            <Item
-                title="Java"
-                icon={JavaIcon.src}
-                expLevel="Some Experience"
-            />
-            <Item
-                title="Linux"
-                icon={LinuxIcon.src}
-                expLevel="Efficient"
-            />
+<section>
+    <div class="container mx-auto h-full">
+        <h2 class="text-white text-3xl font-extrabold mb-10">My Stack</h2>
+        <div class="flex justify-center items-center">
+            <StackWheel client:load items={wheelItems} />
         </div>
     </div>
 </section>

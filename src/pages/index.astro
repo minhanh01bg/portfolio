@@ -13,11 +13,12 @@ import Navigation from '../components/react/Navigation';
 <Layout>
     <main class="min-h-screen">
         <Navigation client:load />
-        
-        <Welcome />
-        <Skillset />
-        <Stack />
-        <Projects />
-        <Guides />
+        <div class="[&>section]:min-h-screen [&>section]:p-10 [&>section]:bg-gradient-to-br even:from-primary-1 even:to-primary-2 odd:from-secondary-1 odd:to-secondary-2">
+            <Welcome />
+            <Skillset />
+            <Stack />
+            <Projects />
+            <Guides />
+        </div>
     </main>
 </Layout>
