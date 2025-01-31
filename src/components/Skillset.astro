@@ -1,34 +1,40 @@
 ---
+import SoftwareDeveloperIcon from "../assets/skill/SoftwareDeveloper.svg"
+import WebDeveloperIcon from "../assets/skill/WebDeveloper.svg"
+import NetworkEngineerIcon from "../assets/skill/NetworkEngineer.svg"
+import GameDeveloperIcon from "../assets/skill/GameDeveloper.svg"
+
 import Item from "../components/skill/Item.astro"
 ---
 
-<section class="min-h-screen bg-gradient-to-br from-purple-900 to-purple-950">
-    <h2>My Skillset</h2>
-    <div class="grid grid-cols-3">
-        <Item
-            title="Software Developer"
-        >
-            I am a software developer.
-        </Item>
-        <Item
-            title="Web Developer"
-        >
-            I am a web developer.
-        </Item>
-        <Item
-            title="Network Engineer"
-        >
-            I am a network engineer.
-        </Item>
-        <Item
-            title="Network Security"
-        >
-            I am a network security.
-        </Item>
-        <Item
-            title="Game Developer"
-        >
-            I am a game developer.
-        </Item>
+<section class="min-h-screen bg-gradient-to-br from-blue-900 to-blue-950 p-10">
+    <div class="mx-auto container">
+        <h2 class="text-white text-3xl font-extrabold mb-2">My Skillset</h2>
+        <div class="grid grid-cols-2 gap-y-64 gap-x-80">
+            <Item
+                title="Software Developer"
+                icon={SoftwareDeveloperIcon.src}
+            >
+                I am a software developer.
+            </Item>
+            <Item
+                title="Web Developer"
+                icon={WebDeveloperIcon.src}
+            >
+                I am a web developer.
+            </Item>
+            <Item
+                title="Network Engineer"
+                icon={NetworkEngineerIcon.src}
+            >
+                I am a network engineer.
+            </Item>
+            <Item
+                title="Game Developer"
+                icon={GameDeveloperIcon.src}
+            >
+                I am a game developer.
+            </Item>
+        </div>
     </div>
 </section>

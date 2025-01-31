@@ -1,49 +1,90 @@
 ---
+import CodeIcon from "../assets/stack/Code.svg"
+import ReactIcon from "../assets/stack/React.svg"
+import CssIcon from "../assets/stack/Css.svg"
+import DockerIcon from "../assets/stack/Docker.svg"
+import GoIcon from "../assets/stack/Go.svg"
+import HtmlIcon from "../assets/stack/Html.svg"
+import KubernetesIcon from "../assets/stack/Kubernetes.svg"
+import LinuxIcon from "../assets/stack/Linux.svg"
+import PythonIcon from "../assets/stack/Python.svg"
+import RustIcon from "../assets/stack/Rust.svg"
+import TsIcon from "../assets/stack/Ts.svg"
+import CSharpIcon from "../assets/stack/Csharp.svg"
+import JavaIcon from "../assets/stack/Java.svg"
+
 import Item from "../components/stack/Item.astro"
 ---
 
-<section class="min-h-screen bg-gradient-to-br from-indigo-900 to-indigo-950">
-    <h2>My Stack</h2>
-    <div class="grid grid-cols-3">
-        <Item
-            title="TS/JS"
-            expLevel="Efficient"
-        />
-        <Item
-            title="CSS"
-            expLevel="Efficient"
-        />
-        <Item
-            title="HTML"
-            expLevel="Efficient"
-        />
-        <Item
-            title="Go"
-            expLevel="Efficient"
-        />
-        <Item
-            title="Python"
-            expLevel="Efficient"
-        />
-        <Item
-            title="C"
-            expLevel="Efficient"
-        />
-        <Item
-            title="Rust"
-            expLevel="Medium"
-        />
-        <Item
-            title="Docker"
-            expLevel="Efficient"
-        />
-        <Item
-            title="Kubernetes"
-            expLevel="Medium"
-        />
-        <Item
-            title="Linux"
-            expLevel="Efficient"
-        />
+<section class="min-h-screen bg-gradient-to-br from-indigo-900 to-indigo-950 p-10">
+    <div class="container mx-auto">
+        <h2 class="text-white text-3xl font-extrabold mb-2">My Stack</h2>
+        <div class="grid grid-cols-5 gap-y-4 gap-x-32">
+            <Item
+                title="TS/JS"
+                icon={TsIcon.src}
+                expLevel="Efficient"
+            />
+            <Item
+                title="React"
+                icon={ReactIcon.src}
+                expLevel="Efficient"
+            />
+            <Item
+                title="CSS"
+                icon={CssIcon.src}
+                expLevel="Efficient"
+            />
+            <Item
+                title="HTML"
+                icon={HtmlIcon.src}
+                expLevel="Efficient"
+            />
+            <Item
+                title="Go"
+                icon={GoIcon.src}
+                expLevel="Efficient"
+            />
+            <Item
+                title="Python"
+                icon={PythonIcon.src}
+                expLevel="Efficient"
+            />
+            <Item
+                title="C"
+                icon={CodeIcon.src}
+                expLevel="Efficient"
+            />
+            <Item
+                title="Rust"
+                icon={RustIcon.src}
+                expLevel="Medium"
+            />
+            <Item
+                title="Docker"
+                icon={DockerIcon.src}
+                expLevel="Efficient"
+            />
+            <Item
+                title="Kubernetes"
+                icon={KubernetesIcon.src}
+                expLevel="Medium"
+            />
+            <Item
+                title="C#"
+                icon={CSharpIcon.src}
+                expLevel="Efficient"
+            />
+            <Item
+                title="Java"
+                icon={JavaIcon.src}
+                expLevel="Some Experience"
+            />
+            <Item
+                title="Linux"
+                icon={LinuxIcon.src}
+                expLevel="Efficient"
+            />
+        </div>
     </div>
 </section>

@@ -1,7 +1,7 @@
 ---
-import GithubIcon from "../components/icons/Github.astro"
-import LinkedinIcon from "../components/icons/Linkedin.astro"
-import YoutubeIcon from "../components/icons/Youtube.astro"
+import GithubIcon from "../assets/welcome/Github.svg"
+import LinkedinIcon from "../assets/welcome/Linkedin.svg"
+import YoutubeIcon from "../assets/welcome/Youtube.svg"
 
 import Link from "../components/welcome/Link.astro"
 
@@ -18,13 +18,22 @@ import EmailMe from "../components/welcome/EmailMe.astro"
             </div>
             <div class="flex gap-6 justify-center">
                 <Link href="https://github.com/gamemann" newTab={true}>
-                    <GithubIcon className="w-12 h-12 fill-white" />
+                    <img
+                        src={GithubIcon.src}
+                        class="w-10 h-10"
+                    />
                 </Link>
                 <Link href="https://www.linkedin.com/in/christiandeacon/" newTab={true}>
-                    <LinkedinIcon className="w-12 h-12 stroke-white" />
+                    <img
+                        src={LinkedinIcon.src}
+                        class="w-10 h-10"
+                    />
                 </Link>
                 <Link href="https://www.youtube.com/@cdeaconado" newTab={true}>
-                    <YoutubeIcon className="w-12 h-12 stroke-white" />
+                    <img
+                        src={YoutubeIcon.src}
+                        class="w-10 h-10"
+                    />
                 </Link>
             </div>
             <div class="flex justify-center">
