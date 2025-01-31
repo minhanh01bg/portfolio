@@ -8,7 +8,7 @@
 }
 
 .wheel {
-    @apply relative w-96 h-96 flex justify-center items-center;
+    @apply relative w-96 h-96 flex justify-center items-center mt-20;
     border-radius: 50%;
     animation: spin 10s linear infinite;
 }
@@ -18,7 +18,7 @@
 }
 
 .wheel-item {
-    @apply rounded-full bg-blue-500 absolute w-16 h-16 flex flex-col justify-center items-center;
+    @apply rounded-full bg-secondary-1 absolute w-16 h-16 flex flex-col justify-center items-center z-10;
     transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
 
@@ -28,15 +28,15 @@
 }
 
 .wheel-item h4 {
-    @apply text-lg text-center text-white font-bold mt-1;
+    @apply text-xl text-center text-white font-extrabold mt-1;
 }
 
 .wheel-item span {
-    @apply text-xs;
+    @apply text-sm;
 }
 
 .wheel-item.active {
-    @apply w-32 h-32;
+    @apply w-48 h-48 bg-secondary-2 z-20;
 }
 
 .wheel-item.active img {
@@ -44,5 +44,5 @@
 }
 
 .wheel-content {
-    @apply flex flex-col justify-center;
+    @apply flex flex-col justify-center items-center;
 }

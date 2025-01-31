@@ -3,6 +3,9 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+            screens: {
+                'xs': '400px'
+            },
             keyframes: {
                 'scale-in': {
                   '0%': { transform: 'scale(0)' },
@@ -28,10 +31,10 @@ export default {
                 'up-down-fast': 'up-down 0.3s ease-out'
               },
               colors: {
-                'primary-1': '#312e81',
-                'primary-2': '#1e1b4b',
-                'secondary-1': '#141234',
-                'secondary-2': '#0c0b20'
+                'primary-1': '#141234',
+                'primary-2': '#0c0b20',
+                'secondary-1': '#1f1d43',
+                'secondary-2': '#2c2a54'
               }
         },
 	},

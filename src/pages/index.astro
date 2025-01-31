@@ -8,17 +8,23 @@ import Projects from "../components/Projects.astro"
 import Guides from "../components/Guides.astro"
 
 import Navigation from '../components/react/Navigation';
+import Flair from '../components/helper/Flair.astro';
 ---
 
 <Layout>
     <main class="min-h-screen">
         <Navigation client:load />
-        <div class="[&>section]:min-h-screen [&>section]:p-10 [&>section]:bg-gradient-to-br even:from-primary-1 even:to-primary-2 odd:from-secondary-1 odd:to-secondary-2">
+        <div class="[&>section]:p-10 bg-gradient-to-br from-primary-1 to-primary-2">
             <Welcome />
             <Skillset />
             <Stack />
             <Projects />
             <Guides />
+            <div class="pt-4 pb-8 flex justify-center">
+                <a href="https://github.com/gamemann/portfolio" target="_blank">
+                    <Flair className="bg-blue-700">Source Code</Flair>
+                </a>
+            </div>
         </div>
     </main>
 </Layout>

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import "../../styles/Wheel.css"
 
@@ -6,6 +6,15 @@ type Item = {
     icon: string
     title: string
     expLevel: number
+}
+
+function getExpText(level: number): JSX.Element {
+    if (level >= 6)
+        return <span className="text-green-200">Very Experienced</span>
+    else if (level >= 4)
+        return <span className="text-gray-200">Experienced</span>
+
+    return <span className="text-red-200">Some Experience</span>
 }
 
 export default function StackWheel ({
@@ -18,6 +27,53 @@ export default function StackWheel ({
     const [hovered, setHovered] = useState<number | null>(null)
     const [paused, setPaused] = useState(false)
 
+    const [winWidth, setWinWidth] = useState(0)
+
+    useEffect(() => {
+        const handleResize = () => {
+            const width = window.innerWidth
+
+            setWinWidth(width)
+        }
+
+        if (winWidth == 0)
+            setWinWidth(window.innerWidth)
+
+        window.addEventListener("resize", handleResize)
+
+        return () => {
+            window.removeEventListener("resize", handleResize)
+        }
+    }, [winWidth])
+
+    // If our screen width is too small, return a grid instead.
+    if (winWidth > 0 && winWidth < 640) {
+        return (
+            <div className="grid grid-cols-2 gap-4">
+                {items.map((v, k) => {
+                    const experience = getExpText(v.expLevel)
+
+                    return (
+                        <div
+                            key={`stack-${k}`}
+                            className="p-4 bg-secondary-1 ring-1 ring-secondary-2 rounded shadow-md shadow-black"
+                        >
+                            <div className="flex flex-col gap-1 items-center">
+                                <img
+                                    src={v.icon}
+                                    alt={v.title}
+                                    className="w-10 h-10"
+                                />
+                                <h3 className="text-white text-xl font-extrabold">{v.title}</h3>
+                                <p className="text-sm">{experience}</p>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
+        )
+    }
+
     return (
         <div
             className={`wheel ${paused ? "paused" : ""}`}
@@ -26,6 +82,8 @@ export default function StackWheel ({
         >
             {items.map((v, k) => {
                 const a = (360 / items.length) * k
+
+                const experience = getExpText(v.expLevel)
 
                 return (
                     <div
@@ -48,7 +106,7 @@ export default function StackWheel ({
                             {hovered === k && (
                                 <div>
                                     <h4>{v.title}</h4>
-                                    <span>{v.expLevel}</span>
+                                    {experience}
                                 </div>
                             )}
                         </div>

@@ -2,12 +2,12 @@
 import Item from "../components/project/Item.astro"
 ---
 
-<section>
+<section id="projects">
     <div class="mx-auto container">
-        <h2 class="text-white text-3xl font-extrabold mb-2">My Primary Projects</h2>
-        <div class="grid grid-cols-3 gap-y-4 gap-x-32">
+        <h2 class="text-white text-3xl font-extrabold mb-4">My Primary Projects</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <Item
-                banner=""
+                banner="/images/project/deaconn.png"
                 title="Deaconn"
                 link="https://deaconn.net"
                 openSource={true}
@@ -34,7 +34,7 @@ import Item from "../components/project/Item.astro"
                 An open source website that serves as an index for game mods and allows users to easily find mods from many sources on the Internet.
             </Item>
             <Item
-                banner=""
+                banner="/images/project/browsertf.png"
                 title="Browser.TF"
                 link="https://btf.bestservers.io"
                 openSource={true}

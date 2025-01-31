@@ -3,37 +3,44 @@ import SoftwareDeveloperIcon from "../assets/skill/SoftwareDeveloper.svg"
 import WebDeveloperIcon from "../assets/skill/WebDeveloper.svg"
 import NetworkEngineerIcon from "../assets/skill/NetworkEngineer.svg"
 import GameDeveloperIcon from "../assets/skill/GameDeveloper.svg"
+import CustomerServiceIcon from "../assets/skill/CustomerService.svg"
 
 import Item from "../components/skill/Item.astro"
 ---
 
-<section>
+<section id="skillset">
     <div class="mx-auto container">
-        <h2 class="text-white text-3xl font-extrabold mb-2">My Skillset</h2>
-        <div class="grid grid-cols-2 gap-y-64 gap-x-80">
+        <h2 class="text-white text-3xl font-extrabold mb-4">My Skillset</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-20 gap-x-4 lg:gap-x-40">
             <Item
                 title="Software Developer"
                 icon={SoftwareDeveloperIcon.src}
             >
-                I am a software developer.
+                With over a decade of experience in software development, I have designed and built a wide range of applications and tools, including automation bots, web scrapers, and custom utilities. My expertise spans multiple programming languages and frameworks, allowing me to develop efficient and scalable solutions.
             </Item>
             <Item
                 title="Web Developer"
                 icon={WebDeveloperIcon.src}
             >
-                I am a web developer.
+                I am a seasoned full-stack web developer with over ten years of experience, specializing in modern web technologies. My skill set includes Next.js, Astro, React, TypeScript, Tailwind CSS, PHP, Laravel, Python, and Django. I am passionate about building high-performance, scalable web applications with clean and maintainable code.
             </Item>
             <Item
                 title="Network Engineer"
                 icon={NetworkEngineerIcon.src}
             >
-                I am a network engineer.
+                Combining network engineering and programming expertise across Linux and Windows environments, I have developed high-performance, Linux-based firewalls leveraging <a href="https://www.iovisor.org/technology/xdp" target="_blank">XDP</a> for fast packet processing. My deep understanding of networking includes firewall tools such as IPTables and NFTables, packet flow analysis, tunneling protocols, and advanced traffic management.
             </Item>
             <Item
                 title="Game Developer"
                 icon={GameDeveloperIcon.src}
             >
-                I am a game developer.
+                My passion for programming began with game development at the age of 12. Since then, I have developed various game modifications for titles like Counter-Strike and Left 4 Dead and contributed open-source assets for game engines such as <a href="https://godotengine.org/" target="_blank">Godot</a>. I enjoy creating immersive experiences through scripting, asset development, and game mechanics programming.
+            </Item>
+            <Item
+                title="Customer Service"
+                icon={CustomerServiceIcon.src}
+            >
+                With experience as a technical support engineer, I have provided expert assistance to customers through phone, ticketing systems, and live chat. I excel in troubleshooting, resolving technical issues efficiently, and delivering clear, professional communication to ensure customer satisfaction. 
             </Item>
         </div>
     </div>

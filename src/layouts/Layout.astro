@@ -1,28 +1,23 @@
+---
+import "../styles/global.css"
+
+const GA = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Christian Deacon's Portfolio</title>
+        <meta name="description" content="Christian Deacon's portfolio. A DevOps engineer with 10+ years experience." />
+        {GA && (
+             <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA}`}></script>
+        )}
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
-
-<style>
-	html, body {
-        @apply m-0 w-full h-full text-gray-100;
-	}
-
-    h1 {
-        @apply text-4xl;
-    }
-
-    section {
-        @apply p-6;
-    }
-    
-</style>

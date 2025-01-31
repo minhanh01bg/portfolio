@@ -5,11 +5,11 @@ import YoutubeIcon from "../assets/welcome/Youtube.svg"
 
 import Link from "../components/welcome/Link.astro"
 
-import EmailMe from "../components/welcome/EmailMe.astro"
 import WelcomeTitle from "./react/Title"
+import Flair from "./helper/Flair.astro"
 ---
 
-<section class="flex items-center justify-center">
+<section id="welcome" class="flex items-center justify-center min-h-screen">
     <div>
         <div class="flex flex-col gap-10">
             <div class="flex flex-col gap-1">
@@ -38,7 +38,9 @@ import WelcomeTitle from "./react/Title"
                 </Link>
             </div>
             <div class="flex justify-center animate-up-down-slow">
-                <EmailMe />
+                <a href="mainto:christianmdeacon@gmail.com">
+                    <Flair className="bg-blue-600 hover:bg-blue-500">Email Me!</Flair>
+                </a>
             </div>
         </div>
     </div>

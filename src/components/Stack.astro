@@ -9,7 +9,7 @@ import KubernetesIcon from "../assets/stack/Kubernetes.svg"
 import LinuxIcon from "../assets/stack/Linux.svg"
 import PythonIcon from "../assets/stack/Python.svg"
 import RustIcon from "../assets/stack/Rust.svg"
-import TsIcon from "../assets/stack/Ts.svg"
+import JsIcon from "../assets/stack/Js.svg"
 import CSharpIcon from "../assets/stack/Csharp.svg"
 import JavaIcon from "../assets/stack/Java.svg"
 
@@ -17,8 +17,8 @@ import StackWheel from "./react/Wheel"
 
 const wheelItems = [
     {
-        title: "TS/JS",
-        icon: TsIcon.src,
+        title: "JS/TS",
+        icon: JsIcon.src,
         expLevel: 10
     },
     {
@@ -37,7 +37,7 @@ const wheelItems = [
         expLevel: 10
     },
     {
-        title: "Go",
+        title: "Golang",
         icon: GoIcon.src,
         expLevel: 10
     },
@@ -84,9 +84,9 @@ const wheelItems = [
 ]
 ---
 
-<section>
+<section id="stack">
     <div class="container mx-auto h-full">
-        <h2 class="text-white text-3xl font-extrabold mb-10">My Stack</h2>
+        <h2 class="text-white text-3xl font-extrabold mb-4">My Stack</h2>
         <div class="flex justify-center items-center">
             <StackWheel client:load items={wheelItems} />
         </div>

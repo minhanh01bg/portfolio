@@ -1,4 +1,6 @@
 ---
+import Flair from "../helper/Flair.astro"
+
 const { banner, title, link, openSource, category } = Astro.props
 
 let bannerToUse = banner
@@ -7,33 +9,36 @@ if (!bannerToUse)
     bannerToUse = "/images/projects/default.png"
 ---
 
-<div class="p-4 ring-1 ring-gray-800 bg-sky-950 rounded">
+<div class="p-4 ring-1 ring-secondary-2 bg-secondary-1 rounded shadow-md shadow-black">
     <div class="flex flex-col gap-1 h-full">
-        <div class="w-full h-72">
-            <img src={bannerToUse} class="w-full h-full object-cover rounded" />
+        <div class="w-full h-32 xs:h-48 sm:h-60 lg:h-72">
+            <a href={link} target="_blank">
+                <img
+                    src={bannerToUse}
+                    alt={title}
+                    class="w-full h-full object-cover rounded"
+                />
+            </a>
         </div>
         <h3 class="text-white text-xl text-center font-bold">{title}</h3>
-        <span>
+        <p class="text-sm">
             <slot />
-        </span>
+        </p>
         <div class="grow"></div>
-        <div class="flex justify-between">
-            <div class="py-2 px-4 bg-gray-600 rounded">
-                <span>{category}</span>
-            </div>
+        <div class="flex flex-wrap gap-y-2 xs:gap-y-0 justify-between mt-8">
+            <Flair className="bg-sky-600">{category}</Flair>
             {openSource && (
-                <div class="py-2 px-4 bg-green-800">
-                    <span class="font-bold text-white">Open Source</span>
-                </div>
+                <Flair className="bg-green-800">Open Source</Flair>
             )}
         </div>
         
-        <div class="flex justify-center">
+        <div class="flex justify-center mt-4">
             <a
                 href={link}
                 target="_blank"
-                class="py-2 px-4 rounded text-white font-bold bg-cyan-800"
-            >View</a>
+            >
+                <Flair className="bg-blue-600 hover:bg-blue-500">View</Flair>
+            </a>
         </div>
     </div>
 </div>
