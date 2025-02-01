@@ -1,6 +1,7 @@
-**Work In Progress & Not Finished**
-
 My portfolio website that utilizes [Astro](https://astro.build/), [React](https://react.dev/), and [Tailwind CSS](https://tailwindcss.com/).
+
+![Preview](./preview/preview.gif)
+
 
 ## Running
 Here are commands you can use to run the web server through Astro (for developer use).
