@@ -11,11 +11,11 @@ export default function Navigation() {
 
     useEffect(() => {
         const handleScroll = () => {
-            const curScroll = window.scrollY
+            const curScrollY = window.scrollY
             const ele = menuRef.current
 
             // Check if we should hide menu or not.
-            if (ele && curScroll > ele.offsetHeight && curScroll > lastScrollY)
+            if (ele && curScrollY > ele.offsetHeight && curScrollY > lastScrollY)
                 setHidden(true)
             else
                 setHidden(false)
@@ -28,17 +28,17 @@ export default function Navigation() {
                     continue
     
                 const rec = sec.getBoundingClientRect()
-                const start = rec.top + window.scrollY
+                const start = rec.top + curScrollY
                 const end = start + rec.height
 
-                if (curScroll >= start - 100 && curScroll < end - 100) {
+                if (curScrollY >= start - 100 && curScrollY < end - 100) {
                     setCurSec(id)
 
                     break
                 }
             }
 
-            setLastScrollY(curScroll)
+            setLastScrollY(curScrollY)
 
         }
 

@@ -8,10 +8,10 @@ import CustomerServiceIcon from "../assets/skill/CustomerService.svg"
 import Item from "../components/skill/Item.astro"
 ---
 
-<section id="skillset">
+<section id="skillset" class="min-h-0 sm:content-hidden sm:min-h-screen">
     <div class="mx-auto container">
         <h2 class="text-white text-3xl font-extrabold mb-4">My Skillset</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-20 gap-x-4 lg:gap-x-40">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-20 gap-x-4 lg:gap-x-40 sm:animate-down-up-slow">
             <Item
                 title="Software Developer"
                 icon={SoftwareDeveloperIcon.src}

@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css"
 
+import ContentLoader from "../components/react/ContentLoader"
+
 const GA = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID
 ---
 
@@ -26,6 +28,7 @@ const GA = import.meta.env.PUBLIC_GOOGLE_ANALYTICS_ID
         )}
 	</head>
 	<body>
+        <ContentLoader client:load />
 		<slot />
 	</body>
 </html>

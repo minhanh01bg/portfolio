@@ -18,17 +18,29 @@ export default {
                     '100%': { transform: 'translateY(0px)' }
                   },
                   'up-down': {
-                    '0%': { transform: 'translateY(-50px)'},
+                    '0%': { transform: 'translateY(-50px)' },
+                    '100%': { transform: 'translateY(0px)' }
+                  },
+                  'down-up': {
+                    '0%': { transform: 'translateY(500px)' },
+                    '100%': { transform: 'translateY(0px)' }
+                  },
+                  'left-right': {
+                    '0%': { transform: 'translateX(-105vh)' },
                     '100%': { transform: 'translateY(0px)'}
                   }
               },
               animation: {
-                'scale-in-slow': 'scale-in 1.0s ease-out',
+                'scale-in-slow': 'scale-in 1.5s ease-out',
                 'scale-in-fast': 'scale-in 0.3s ease-out',
                 'bounce-up-slow': 'bounce-up 3.0s ease-out forwards',
                 'bounce-up-fast': 'bounce-up 1.5s ease-out forwards',
-                'up-down-slow': 'up-down 1.0s ease-out',
-                'up-down-fast': 'up-down 0.3s ease-out'
+                'up-down-slow': 'up-down 1.5s ease-out',
+                'up-down-fast': 'up-down 0.3s ease-out',
+                'down-up-slow': 'down-up 1.5s ease-out',
+                'down-up-fast': 'down-up 0.3s ease-out',
+                'left-right-slow': 'left-right 1.5s ease-out',
+                'left-right-fast': 'left-right 0.3s ease-out'
               },
               colors: {
                 'primary-1': '#141234',

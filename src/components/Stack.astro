@@ -84,10 +84,10 @@ const wheelItems = [
 ]
 ---
 
-<section id="stack">
+<section id="stack" class="min-h-0 sm:content-hidden sm:min-h-screen">
     <div class="container mx-auto h-full">
         <h2 class="text-white text-3xl font-extrabold mb-4">My Stack</h2>
-        <div class="flex justify-center items-center">
+        <div class="flex justify-center items-center sm:animate-scale-in-slow">
             <StackWheel client:load items={wheelItems} />
         </div>
     </div>
