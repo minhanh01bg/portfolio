@@ -22,6 +22,22 @@
             @apply text-blue-300;
         }
     }
+
+    ::-webkit-scrollbar {
+        @apply w-2;
+        @apply rounded;
+    }
+    
+    ::-webkit-scrollbar-track {
+        @apply bg-secondary-1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        @apply bg-secondary-2;
+        
+        @apply rounded-lg;
+    }
+    
 }
 
 @layer components {
