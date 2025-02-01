@@ -7,14 +7,27 @@
     }
 }
 
+@keyframes counter-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
 .wheel {
     @apply relative w-96 h-96 flex justify-center items-center mt-20;
     border-radius: 50%;
     animation: spin 10s linear infinite;
 }
 
-.wheel.paused {
+.wheel.paused  {
     animation-play-state: paused;
+
+    & .wheel-content {
+        animation-play-state: paused;
+    }
 }
 
 .wheel-item {
@@ -45,4 +58,5 @@
 
 .wheel-content {
     @apply flex flex-col justify-center items-center;
+    animation: counter-spin 10s linear infinite;
 }

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { createRef, useEffect, useRef, useState } from "react"
 
 import "../../styles/Wheel.css"
 
@@ -90,7 +90,7 @@ export default function StackWheel ({
                         key={`wheel-${k}`}
                         className={`wheel-item ${hovered === k ? "active" : ""}`}
                         style={{
-                            transform: `rotate(${a}deg) translate(${radius}px)`
+                            transform: `rotate(${a}deg) translate(${radius}px) rotate(${-a}deg)`
                         }}
                         onMouseEnter={() => setHovered(k)}
                         onMouseLeave={() => setHovered(null)}
@@ -98,7 +98,7 @@ export default function StackWheel ({
                         <div
                             className="wheel-content"
                             style={{
-                                transform: `rotate(30deg)`
+                                transform: `rotate(${a}deg) rotate(${-a}deg)`
                             }}
                         >
                             <img src={v.icon} alt={v.title} />
