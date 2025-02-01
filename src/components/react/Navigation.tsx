@@ -52,7 +52,7 @@ export default function Navigation() {
     return (
         <div ref={menuRef} className={`fixed z-50 w-full animate-up-down-fast ${hidden ? "hidden" : ""}`}>
             <div className="flex justify-center">
-                <div className="rounded py-1 px-2 xs:py-4 xs:px-8 border bg-secondary-1 border-secondary-2">
+                <div className="rounded py-1 px-2 xs:py-4 xs:px-8 border bg-secondary-1 border-secondary-2 mt-2">
                     <div className="flex gap-2 xs:gap-6">
                         <Item
                             title="Skillset"
@@ -107,7 +107,7 @@ function Item({
         <a
             href="#"
             onClick={gotoSection(sec)}
-            className={`text-sm xs:text-base ${curSec === sec ? "font-bold text-white" : ""}`}
+            className={`text-sm xs:text-base ${curSec === sec ? "font-bold text-white duration-150" : ""}`}
         >{title}</a>
     )
 }
