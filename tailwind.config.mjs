@@ -50,7 +50,9 @@ export default {
                 'btn-primary': '#48439D',
                 'btn-primary-hover': '#4E49AB',
                 'btn-secondary': '#6662BC',
-                'btn-secondary-hover': '#7470C2'
+                'btn-secondary-hover': '#7470C2',
+                'link': '#ACA9DA',
+                'link-hover': '#BAB8E0'
               }
         },
 	},
