@@ -57,6 +57,6 @@
 }
 
 .wheel-content {
-    @apply flex flex-col justify-center items-center;
+    @apply flex flex-col gap-1 justify-center items-center;
     animation: counter-spin 10s linear infinite;
 }

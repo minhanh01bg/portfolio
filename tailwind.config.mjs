@@ -46,9 +46,13 @@ export default {
                 'primary-1': '#141234',
                 'primary-2': '#0c0b20',
                 'secondary-1': '#1f1d43',
-                'secondary-2': '#2c2a54'
+                'secondary-2': '#2c2a54',
+                'btn-primary': '#48439D',
+                'btn-primary-hover': '#4E49AB',
+                'btn-secondary': '#6662BC',
+                'btn-secondary-hover': '#7470C2'
               }
         },
 	},
-	plugins: [],
+	plugins: [require('tailwindcss-intersect'), require('tailwindcss-motion')],
 }

@@ -10,11 +10,11 @@ type Item = {
 
 function getExpText(level: number): JSX.Element {
     if (level >= 6)
-        return <span className="text-green-200">Very Experienced</span>
+        return <span className="italic text-cyan-300">Very Experienced</span>
     else if (level >= 4)
-        return <span className="text-gray-200">Experienced</span>
+        return <span className="italic text-cyan-400">Experienced</span>
 
-    return <span className="text-red-200">Some Experience</span>
+    return <span className="text-cyan-500">Some Experience</span>
 }
 
 export default function StackWheel ({

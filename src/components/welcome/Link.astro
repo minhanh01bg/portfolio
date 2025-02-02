@@ -2,6 +2,10 @@
 const { href, newTab } = Astro.props
 ---
 
-<a href={href} target={newTab ? "_blank" : undefined}>
+<a
+    href={href}
+    target={newTab ? "_blank" : undefined}
+    class="intersect:motion-preset-rebound-up intersect-once"
+>
     <slot />
 </a>

@@ -9,22 +9,26 @@ import Guides from "../components/Guides.astro"
 
 import Navigation from '../components/react/Navigation';
 import Flair from '../components/helper/Flair.astro';
+import ObserverProvider from '../components/react/Observer';
 ---
 
 <Layout>
-    <main class="min-h-screen">
-        <Navigation client:load />
-        <div class="[&>section]:p-10 bg-gradient-to-br from-primary-1 to-primary-2">
-            <Welcome />
-            <Skillset />
-            <Stack />
-            <Projects />
-            <Guides />
-            <div class="pt-4 pb-8 flex justify-center">
-                <a href="https://github.com/gamemann/portfolio" target="_blank">
-                    <Flair className="bg-blue-700 hover:bg-blue-600">Source Code</Flair>
-                </a>
+    <ObserverProvider client:load>
+        <main class="min-h-screen">
+            <Navigation client:load />
+            <div class="[&>section]:p-10 bg-gradient-to-br from-primary-1 to-primary-2">
+                <Welcome />
+                
+                <Skillset />
+                <Stack />
+                <Projects />
+                <Guides />
+                <div class="pt-4 pb-8 flex justify-center sm:intersect:motion-preset-slide-left-md intersect-once">
+                    <a href="https://github.com/gamemann/portfolio" target="_blank">
+                        <Flair className="bg-btn-primary hover:bg-btn-primary-hover duration-100">Source Code</Flair>
+                    </a>
+                </div>
             </div>
-        </div>
-    </main>
+        </main>
+    </ObserverProvider>
 </Layout>

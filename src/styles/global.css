@@ -39,9 +39,3 @@
     }
     
 }
-
-@layer components {
-    .content-hidden > div > div {
-        @apply !hidden;
-    }
-}

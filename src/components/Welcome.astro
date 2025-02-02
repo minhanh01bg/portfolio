@@ -14,10 +14,10 @@ import Flair from "./helper/Flair.astro"
         <div class="flex flex-col gap-10">
             <div class="flex flex-col gap-1">
                 <WelcomeTitle client:load />
-                <h2 class="text-blue-300 text-center font-bold text-xl animate-scale-in-fast">DevOps Engineer</h2>
-                <h3 class="text-gray-100 text-center text-sm italic animate-scale-in-slow">10+ Years Experience</h3>
+                <h2 class="text-blue-300 text-center font-bold text-xl intersect:animate-scale-in-fast intersect-once">DevOps Engineer</h2>
+                <h3 class="text-gray-100 text-center text-sm italic intersect:animate-scale-in-slow intersect-once">10+ Years Experience</h3>
             </div>
-            <div class="flex gap-6 justify-center animate-bounce-up-fast">
+            <div class="flex gap-6 justify-center">
                 <Link href="https://github.com/gamemann" newTab={true}>
                     <img
                         src={GithubIcon.src}
@@ -37,9 +37,9 @@ import Flair from "./helper/Flair.astro"
                     />
                 </Link>
             </div>
-            <div class="flex justify-center animate-up-down-slow">
+            <div class="flex justify-center intersect:motion-preset-expand intersect-once">
                 <a href="mailto:christianmdeacon@gmail.com">
-                    <Flair className="bg-blue-700 hover:bg-blue-600">Email Me!</Flair>
+                    <Flair className="bg-btn-primary hover:bg-btn-primary-hover duration-100">Email Me!</Flair>
                 </a>
             </div>
         </div>
