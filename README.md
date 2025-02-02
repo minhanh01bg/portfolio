@@ -17,7 +17,7 @@ cd portfolio
 npm install
 
 # Run Astro's dev server available on port 4321 by default.
-# NOTE - You can pass --host <address> to listen on specific IPs address (or all with 0.0.0.0).
+# NOTE - You can pass --host <address> to listen on specific IP addresses (or all with 0.0.0.0).
 npx astro dev
 ```
 
