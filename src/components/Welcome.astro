@@ -7,6 +7,10 @@ import Link from "../components/welcome/Link.astro"
 
 import WelcomeTitle from "./react/Title"
 import Flair from "./helper/Flair.astro"
+
+import EmailButton from "../components/react/EmailButton"
+
+const emailHash = import.meta.env.PUBLIC_EMAIL_HASH
 ---
 
 <section id="welcome" class="flex items-center justify-center min-h-screen">
@@ -37,11 +41,13 @@ import Flair from "./helper/Flair.astro"
                     />
                 </Link>
             </div>
-            <div class="flex justify-center intersect:motion-preset-expand intersect-once">
-                <a href="mailto:christianmdeacon@gmail.com">
-                    <Flair className="bg-btn-primary hover:bg-btn-primary-hover duration-100">Email Me!</Flair>
-                </a>
-            </div>
+            {emailHash && (
+                <div class="flex justify-center intersect:motion-preset-expand intersect-once">
+                    <EmailButton client:load emailHash={emailHash}>
+                        <Flair className="bg-btn-primary hover:bg-btn-primary-hover duration-100">Email Me!</Flair>
+                    </EmailButton>
+                </div>
+            )}
         </div>
     </div>
 </section>
