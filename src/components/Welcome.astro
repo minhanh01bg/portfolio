@@ -10,7 +10,7 @@ import Flair from "./helper/Flair.astro"
 
 import EmailButton from "../components/react/EmailButton"
 
-const emailHash = import.meta.env.PUBLIC_EMAIL_HASH
+const email64 = import.meta.env.PUBLIC_EMAIL_ENCODE
 ---
 
 <section id="welcome" class="flex items-center justify-center min-h-screen">
@@ -41,9 +41,9 @@ const emailHash = import.meta.env.PUBLIC_EMAIL_HASH
                     />
                 </Link>
             </div>
-            {emailHash && (
+            {email64 && (
                 <div class="flex justify-center intersect:motion-preset-expand intersect-once">
-                    <EmailButton client:load emailHash={emailHash}>
+                    <EmailButton client:load email64={email64}>
                         <Flair className="bg-btn-primary hover:bg-btn-primary-hover duration-100">Email Me!</Flair>
                     </EmailButton>
                 </div>

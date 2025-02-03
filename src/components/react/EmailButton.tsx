@@ -1,10 +1,10 @@
 import { type ReactNode } from "react";
 
 export default function EmailButton({
-    emailHash,
+    email64,
     children
 } : {
-    emailHash: string
+    email64: string
     children: ReactNode
 }) {
     return (
@@ -16,7 +16,7 @@ export default function EmailButton({
                     if (c) {
                         // Decode Base64 value to attempt to prevent spam bots from getting ahold of the email so easily.
                         // Most spam bots don't even utilize JavaScript as well.
-                        const email = atob(emailHash)
+                        const email = atob(email64)
 
                         window.location.href = `mailto:${email}`
                     }
