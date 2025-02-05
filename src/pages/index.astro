@@ -10,6 +10,7 @@ import Guides from "../components/Guides.astro"
 import Navigation from '../components/react/Navigation';
 import Flair from '../components/helper/Flair.astro';
 import ObserverProvider from '../components/react/Observer';
+import AboutMe from '../components/AboutMe.astro';
 ---
 
 <Layout>
@@ -18,7 +19,8 @@ import ObserverProvider from '../components/react/Observer';
             <Navigation client:load />
             <div class="[&>section]:p-10 bg-gradient-to-br from-primary-1 to-primary-2">
                 <Welcome />
-                
+
+                <AboutMe />
                 <Skillset />
                 <Stack />
                 <Projects />

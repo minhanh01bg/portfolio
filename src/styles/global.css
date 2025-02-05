@@ -7,14 +7,10 @@
         @apply m-0 w-full h-full text-gray-100;
 	}
 
-    h1 {
-        @apply text-4xl;
+    section {
+        @apply px-6 py-10;
     }
 
-    section {
-        @apply p-6;
-    }
-    
     p > a {
         @apply text-link;
 

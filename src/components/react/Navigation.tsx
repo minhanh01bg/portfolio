@@ -5,7 +5,7 @@ export default function Navigation() {
     const [lastScrollY, setLastScrollY] = useState(0)
 
     const [curSec, setCurSec] = useState<string | null>(null)
-    const sectionIds = ["welcome", "skillset", "stack", "projects", "guides"]
+    const sectionIds = ["about-me", "welcome", "skillset", "stack", "projects", "guides"]
 
     const menuRef = useRef<HTMLDivElement | null>(null)
 
@@ -54,6 +54,11 @@ export default function Navigation() {
             <div className="flex justify-center">
                 <div className="rounded py-1 px-2 xs:py-4 xs:px-8 border bg-secondary-1 border-secondary-2 mt-2">
                     <div className="flex gap-2 xs:gap-6">
+                        <Item
+                            title="About Me"
+                            sec="about-me"
+                            curSec={curSec}
+                        />
                         <Item
                             title="Skillset"
                             sec="skillset"
