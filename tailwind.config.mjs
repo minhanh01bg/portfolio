@@ -47,6 +47,8 @@ export default {
                 'primary-2': '#0c0b20',
                 'secondary-1': '#1f1d43',
                 'secondary-2': '#2c2a54',
+                'navbar-1': '#1f1d43',
+                'navbar-2': '#2c2a54',
                 'btn-primary': '#48439D',
                 'btn-primary-hover': '#4E49AB',
                 'btn-secondary': '#6662BC',
