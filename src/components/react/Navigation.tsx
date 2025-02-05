@@ -51,11 +51,11 @@ export default function Navigation() {
 
     return (
         <div ref={menuRef} className={`fixed z-50 w-full animate-up-down-fast ${hidden ? "hidden" : ""}`}>
-            <div className="flex justify-center">
-                <div className="rounded py-1 px-2 xs:py-4 xs:px-8 border bg-secondary-1 border-secondary-2 mt-2">
+            <div className="flex justify-center px-2">
+                <div className="rounded py-4 px-8 border bg-secondary-1 border-secondary-2 mt-2 overflow-y-scroll">
                     <div className="flex gap-2 xs:gap-6">
                         <Item
-                            title="About Me"
+                            title="About"
                             sec="about-me"
                             curSec={curSec}
                         />
