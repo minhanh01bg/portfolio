@@ -1,4 +1,4 @@
-import { createRef, useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 
 import "../../styles/Wheel.css"
 
