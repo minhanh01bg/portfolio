@@ -7,7 +7,7 @@ export default function WelcomeTitle() {
                 sequence={["Christian Deacon"]}
                 speed={20}
                 wrapper="h1"
-                className="text-white font-extrabold text-4xl"
+                className="text-white font-extrabold text-4xl font-poppins"
             />
         </>
     )

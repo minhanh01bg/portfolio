@@ -55,6 +55,9 @@ export default {
                 'btn-secondary-hover': '#7470C2',
                 'link': '#ACA9DA',
                 'link-hover': '#BAB8E0'
+              },
+              'fontFamily': {
+                'poppins': "Poppins, sans-serif"
               }
         },
 	},
