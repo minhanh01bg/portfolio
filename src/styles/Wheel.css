@@ -17,7 +17,7 @@
 }
 
 .wheel {
-    @apply relative w-96 h-96 flex justify-center items-center mt-20;
+    @apply relative w-96 h-96 flex justify-center items-center;
     border-radius: 50%;
     animation: spin 10s linear infinite;
 }
