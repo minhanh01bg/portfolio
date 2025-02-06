@@ -117,8 +117,8 @@ const wheelItems = [
 <section id="stack">
     <div class="container mx-auto h-full">
         <h2 class="text-white text-3xl font-extrabold mb-4">My Stack</h2>
-        <div class="flex justify-center items-center sm:intersect:animate-scale-in-slow intersect-once">
-            <StackWheel client:load items={wheelItems} />
+        <div class="flex justify-center items-center sm:intersect:animate-scale-in-slow intersect-once my-20">
+            <StackWheel client:load items={wheelItems} radius={250.0} />
         </div>
     </div>
 </section>
